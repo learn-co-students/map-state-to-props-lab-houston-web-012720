@@ -44,4 +44,10 @@ class UserInput extends Component {
   }
 }
 
-export default connect()(UserInput);
+const mapDispatchToProps = () => {
+  return {
+    dispatch: ((action) => dispatch(action))
+  }
+}
+
+export default connect(mapDispatchToProps)(UserInput);
